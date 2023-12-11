@@ -2,7 +2,9 @@ zip_fn = ged231-csv.zip
 csv_fn = GEDEvent_v23_1.csv
 url = https://ucdp.uu.se/downloads/ged/$(zip_fn)
 
-ownload: 
+all: clean download build
+
+download: 
 	curl -OL $(url)
 	unzip $(zip_fn)
 
@@ -12,6 +14,6 @@ build:
 	-f -o a.pmtiles
 
 clean:
-	rm $(zip_fn)
-	rm $(csv_fn)
+	-rm $(zip_fn)
+	-rm $(csv_fn)
 

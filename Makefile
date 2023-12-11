@@ -2,7 +2,7 @@ zip_fn = ged231-csv.zip
 csv_fn = GEDEvent_v23_1.csv
 url = https://ucdp.uu.se/downloads/ged/$(zip_fn)
 
-all: clean download build
+world: clean download build
 
 download: 
 	curl -OL $(url)
